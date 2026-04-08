@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIOMAY CASSAVA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .wa {
+      background-color: #25D366;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body><header>
+  <h1>SIOMAY CASSAVA</h1>
+  <p>Lezat, murah, dan bikin nagih 😋</p>
+</header><div class="container">  <div class="product">
+    <h2>Siomay Singkong</h2>
+    <img src="siomay.jpg" alt="Siomay Singkong" style="width:100%; border-radius:10px;">
+    <p>Siomay singkong</p>
+    <p>Harga: Rp2.500 / pcs</p>
+    <button onclick="beli('Siomay Singkong')">Beli</button>
+    <br>
+    <button class="wa" onclick="wa('Siomay Singkong')">Order via WhatsApp</button>
+  </div>  <div class="product">
+    <h2>Siomay Singkong Paket Hemat</h2>
+    <img src="siomay.jpg" alt="Siomay Singkong" style="width:100%; border-radius:10px;">
+    <p>Siomay singkong paket hemat</p>
+    <p>Harga: Rp10.000 / 5 pcs</p>
+    <button onclick="beli('Paket Hemat Siomay')">Beli</button>
+    <br>
+    <button class="wa" onclick="wa('Paket Hemat Siomay')">Order via WhatsApp</button>
+  </div></div><script>
+  function beli(produk) {
+    alert("Kamu memilih " + produk + " 😊");
+  }
+
+function wa(produk) {
+  var nomor = "6283170797307"; 
+  var pesan = "Halo, saya mau pesan " + produk;
+  var url = "https://api.whatsapp.com/send?phone=" + nomor + "&text=" + encodeURIComponent(pesan);
+  window.open(url, "_blank");
+}
+</script>
+</script></body>
+</html>
